@@ -19,13 +19,15 @@ public class ClicksModel implements ClicksContract.Model {
     @Override
     public void updateOnRestartScreen(Integer number) {
         // Log.e(TAG, "updateOnRestartScreen()");
-        numOfClicks = number;
+
+        // TODO: include code if necessary
     }
 
     @Override
     public void updateWithDataFromPreviousScreen(Integer number) {
         // Log.e(TAG, "updateWithDataFromPreviousScreen()");
-        numOfClicks = number;
+
+        // TODO: include code if necessary
     }
 
     @Override

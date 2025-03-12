@@ -29,25 +29,21 @@ public class CounterModel implements CounterContract.Model {
     public void updateOnRestartScreen(Integer counter, Integer clicks) {
         // Log.e(TAG, "updateOnRestartScreen()");
 
-        counterVal = counter;
-        numOfClicks = clicks;
+        // TODO: include code if necessary
     }
 
     @Override
     public void updateWithDataFromClicksScreen(Integer number) {
         // Log.e(TAG, "updateWithDataFromClicksScreen()");
-        numOfClicks = number;
+
+        // TODO: include code if necessary
     }
 
 
     @Override
     public void incrementCounter() {
-        counterVal++;
-        numOfClicks++;
 
-        if(counterVal == 10){
-          counterVal=0;
-        }
+        // TODO: include code if necessary
     }
 
     @Override
