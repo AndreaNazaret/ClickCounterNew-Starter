@@ -11,8 +11,10 @@ robolectric = "4.14.1"
 rules = "1.6.1"
 runner = "1.6.2"
 uiautomator = "2.3.0"
+cucumberJava = "7.2.3"
 
 [libraries]
+cucumber-java = { module = "io.cucumber:cucumber-java", version.ref = "cucumberJava" }
 espresso-contrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espressoCore" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

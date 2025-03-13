@@ -34,6 +34,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    sourceSets {
+
+        androidTest {
+            assets.srcDirs = ['src/androidTest/assets']
+            java.srcDirs = ['src/androidTest/java']
+        }
+
+    }
 }
 
 dependencies {
@@ -48,6 +57,7 @@ dependencies {
     testImplementation libs.rules
     testImplementation libs.core
     testImplementation libs.runner
+    testImplementation libs.cucumber.java
 
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
@@ -55,4 +65,5 @@ dependencies {
     androidTestImplementation libs.runner
     androidTestImplementation libs.rules
     androidTestImplementation libs.espresso.contrib
+    androidTestImplementation libs.cucumber.java
 }
