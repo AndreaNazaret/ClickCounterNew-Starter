@@ -276,7 +276,7 @@ public class EspressoTests {
     testSteps.hacemos_clic_en_boton_INCREMENT();
 
     // When("rotamos pantalla COUNTER")
-    testSteps.rotamos_pantalla_COUNTER();
+    testSteps.rotamos_pantalla();
 
     // Then("texto en COUNTER muestra 1")
     testSteps.texto_en_COUNTER_muestra(1);
@@ -307,8 +307,8 @@ public class EspressoTests {
       testSteps.hacemos_clic_en_boton_INCREMENT();
     }
 
-    // When("rotamos pantalla COUNTER")
-    testSteps.rotamos_pantalla_COUNTER();
+    // When("rotamos pantalla")
+    testSteps.rotamos_pantalla();
 
     // Then("texto en COUNTER muestra 0")
     testSteps.texto_en_COUNTER_muestra(0);
@@ -340,10 +340,8 @@ public class EspressoTests {
     // And("iniciamos pantalla CLICKS")
     testSteps.iniciamos_pantalla_CLICKS();
 
-    // When("rotamos pantalla COUNTER")
-    testSteps.rotamos_pantalla_COUNTER();
-    // And("rotamos pantalla CLICKS")
-    testSteps.rotamos_pantalla_CLICKS();
+    // And("rotamos pantalla ")
+    testSteps.rotamos_pantalla();
 
     // Then("texto en CLICKS muestra 10")
     testSteps.texto_en_CLICKS_muestra(10);
@@ -384,10 +382,8 @@ public class EspressoTests {
     // And("resumimos pantalla COUNTER")
     testSteps.resumimos_pantalla_COUNTER();
 
-    // When("rotamos pantalla COUNTER")
-    testSteps.rotamos_pantalla_COUNTER();
-    // And("rotamos pantalla CLICKS")
-    testSteps.rotamos_pantalla_CLICKS();
+    // When("rotamos pantalla")
+    testSteps.rotamos_pantalla();
 
     // Then("texto en COUNTER muestra 1")
     testSteps.texto_en_COUNTER_muestra(1);
@@ -435,8 +431,8 @@ public class EspressoTests {
     // And("hacemos clic en boton RESET")
     testSteps.hacemos_clic_en_boton_RESET();
 
-    // When("rotamos pantalla COUNTER")
-    testSteps.rotamos_pantalla_COUNTER();
+    // When("rotamos pantalla")
+    testSteps.rotamos_pantalla();
 
     // Then("texto en COUNTER muestra 0")
     testSteps.texto_en_COUNTER_muestra(0);
@@ -499,10 +495,8 @@ public class EspressoTests {
     // And("iniciamos pantalla CLICKS")
     testSteps.iniciamos_pantalla_CLICKS();
 
-    // When("rotamos pantalla COUNTER")
-    testSteps.rotamos_pantalla_COUNTER();
-    // And("rotamos pantalla CLICKS")
-    testSteps.rotamos_pantalla_CLICKS();
+    // When("rotamos pantalla")
+    testSteps.rotamos_pantalla();
 
     // Then("texto en CLICKS muestra 2")
     testSteps.texto_en_CLICKS_muestra(2);

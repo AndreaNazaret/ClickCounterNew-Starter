@@ -78,8 +78,7 @@ Feature: Click Counter App
     And hacemos clic en boton CLICKS
     And pausamos pantalla COUNTER
     And iniciamos pantalla CLICKS
-    When rotamos pantalla COUNTER
-    And rotamos pantalla CLICKS
-    Then texto en CLICKS muestra 10
+    When rotamos pantalla
+    Then texto en CLICKS muestra 13
     And boton CLEAR se encuentra "ON"
 
