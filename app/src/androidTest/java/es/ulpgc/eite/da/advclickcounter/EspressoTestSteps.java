@@ -234,4 +234,13 @@ public class EspressoTestSteps {
 
   }
 
+  @And("rotamos pantalla CLICKS")
+  public void rotamosPantallaCLICKS() {
+    rotamos_pantalla();
+  }
+
+  @When("rotamos pantalla COUNTER")
+  public void rotamosPantallaCOUNTER() {
+    rotamos_pantalla();
+  }
 }
