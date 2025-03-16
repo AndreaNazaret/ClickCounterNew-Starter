@@ -15,7 +15,7 @@ import es.ulpgc.eite.da.advclickcounter.clicks.ClicksActivity;
 import es.ulpgc.eite.da.advclickcounter.counter.CounterActivity;
 
 
-public class RobolectricTestSteps {
+public class RobolectricTestsSteps {
 
 
   private ActivityController<CounterActivity> counterTestCtrl;
@@ -80,7 +80,7 @@ public class RobolectricTestSteps {
 
     Button btn = activity.findViewById(R.id.btnReset);
     assertThat(btn.isEnabled(), equalTo(activado));
-    
+
   }
 
   public void boton_CLICKS_se_encuentra(boolean activado) {
@@ -88,7 +88,7 @@ public class RobolectricTestSteps {
 
     Button btn = activity.findViewById(R.id.btnClicks);
     assertThat(btn.isEnabled(), equalTo(activado));
-    
+
   }
 
   public void boton_CLEAR_se_encuentra(boolean activado) {
@@ -162,5 +162,6 @@ public class RobolectricTestSteps {
         .resume()
         .visible();
   }
+
 
 }

@@ -13,7 +13,7 @@ import org.robolectric.annotation.Config;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class RobolectricTests {
 
-  RobolectricTestSteps testSteps = new RobolectricTestSteps();
+  RobolectricTestsSteps testSteps = new RobolectricTestsSteps();
 
 
   @Test

@@ -13,7 +13,7 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EspressoTests {
 
-  EspressoTestSteps testSteps = new EspressoTestSteps();
+  EspressoTestsSteps testSteps = new EspressoTestsSteps();
 
 
   @Test

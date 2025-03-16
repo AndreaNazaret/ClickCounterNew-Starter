@@ -26,39 +26,39 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 @SuppressWarnings("ALL")
-public class EspressoTestSteps {
+public class EspressoTestsSteps {
 
 
   private ActivityTestRule<CounterActivity> testRule =
       new ActivityTestRule<>(CounterActivity.class,false, false);
 
 
-  @And("^boton INCREMENT se encuentra \"([^\"]*)\"$")
-  //@And("boton INCREMENT se encuentra {string}")
+  //@And("^boton INCREMENT se encuentra \"([^\"]*)\"$")
+  @And("boton INCREMENT se encuentra {string}")
   public void botonIncrementSeEncuentra(String estado) {
     boton_INCREMENT_se_encuentra(estado.equals("ON"));
   }
 
-  @And("^boton RESET se encuentra \"([^\"]*)\"$")
-  //@And("boton RESET se encuentra {string}")
+  //@And("^boton RESET se encuentra \"([^\"]*)\"$")
+  @And("boton RESET se encuentra {string}")
   public void botonResetSeEncuentra(String estado) {
     boton_RESET_se_encuentra(estado.equals("ON"));
   }
 
-  @And("^boton CLICKS se encuentra \"([^\"]*)\"$")
-  //@And("boton CLICKS se encuentra {string}")
+  //@And("^boton CLICKS se encuentra \"([^\"]*)\"$")
+  @And("boton CLICKS se encuentra {string}")
   public void botonClicksSeEncuentra(String estado) {
     boton_CLICKS_se_encuentra(estado.equals("ON"));
   }
 
-  @And("^boton CLEAR se encuentra \"([^\"]*)\"$")
-  //@Then("boton CLEAR se encuentra {string}")
+  //@And("^boton CLEAR se encuentra \"([^\"]*)\"$")
+  @Then("boton CLEAR se encuentra {string}")
   public void botonClearSeEncuentra(String estado) {
     boton_CLEAR_se_encuentra(estado.equals("ON"));
   }
 
-  @And("^hacemos clic en boton INCREMENT (\\d+) veces$")
-  //@When("hacemos clic en boton INCREMENT {int} veces")
+  //@And("^hacemos clic en boton INCREMENT (\\d+) veces$")
+  @When("hacemos clic en boton INCREMENT {int} veces")
   public void hacemosClicEnBotonIncrementVeces(int veces) {
     for(int i = 0; i < veces; i++) {
       hacemos_clic_en_boton_INCREMENT();
@@ -135,8 +135,8 @@ public class EspressoTestSteps {
 
   }
 
-  //@Given("texto en COUNTER muestra {int}")
-  @And("^texto en COUNTER muestra (\\d+)$")
+  @Given("texto en COUNTER muestra {int}")
+  //@And("^texto en COUNTER muestra (\\d+)$")
   public void texto_en_COUNTER_muestra(int numero) {
 
     String text= String.valueOf(numero);
@@ -147,8 +147,8 @@ public class EspressoTestSteps {
 
   }
 
-  @And("^texto en CLICKS muestra (\\d+)$")
-  //@Then("texto en CLICKS muestra {int}")
+  //@And("^texto en CLICKS muestra (\\d+)$")
+  @Then("texto en CLICKS muestra {int}")
   public void texto_en_CLICKS_muestra(int numero) {
 
     String text= String.valueOf(numero);
