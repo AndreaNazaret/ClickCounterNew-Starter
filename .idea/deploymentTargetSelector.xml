@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-03-11T07:04:05.262608Z">
+        <DropdownSelection timestamp="2025-03-25T12:14:21.335886900Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=/Users/Luis/.android/avd/Pixel_8_API_33_13.0_.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\anaza\.android\avd\Pixel_XL_API_27.avd" />
             </handle>
           </Target>
         </DropdownSelection>
@@ -15,10 +15,10 @@
       </SelectionState>
       <SelectionState runConfigName="EspressoTests">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-03-10T19:43:42.862810Z">
+        <DropdownSelection timestamp="2025-03-25T13:06:02.300965600Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=/Users/Luis/.android/avd/Pixel_8_API_33_13.0_.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\anaza\.android\avd\Pixel_XL_API_27.avd" />
             </handle>
           </Target>
         </DropdownSelection>

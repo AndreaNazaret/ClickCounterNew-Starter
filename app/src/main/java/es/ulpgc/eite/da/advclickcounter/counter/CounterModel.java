@@ -30,6 +30,9 @@ public class CounterModel implements CounterContract.Model {
         // Log.e(TAG, "updateOnRestartScreen()");
 
         // TODO: include code if necessary
+        counterVal = counter;
+        numOfClicks = clicks;
+
     }
 
     @Override
@@ -37,6 +40,8 @@ public class CounterModel implements CounterContract.Model {
         // Log.e(TAG, "updateWithDataFromClicksScreen()");
 
         // TODO: include code if necessary
+        numOfClicks = number;
+
     }
 
 
@@ -44,6 +49,9 @@ public class CounterModel implements CounterContract.Model {
     public void incrementCounter() {
 
         // TODO: include code if necessary
+        counterVal = (counterVal + 1) % 10;
+        numOfClicks++;
+
     }
 
     @Override

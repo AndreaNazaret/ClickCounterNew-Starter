@@ -30,6 +30,10 @@ public class CounterPresenter implements CounterContract.Presenter {
         // initialize the state
         state = new CounterState();
         // TODO: insert code if necessary
+        state.counterVal=0;
+        state.isIncrEnabled=true;
+        state.isClicksEnabled=false;
+        state.isResetEnabled=false;
     }
 
     @Override
@@ -41,6 +45,7 @@ public class CounterPresenter implements CounterContract.Presenter {
 
         // update the model
         // TODO: insert code if necessary
+        model.updateWithDataFromClicksScreen(state.counterVal);
     }
 
     @Override
@@ -53,11 +58,16 @@ public class CounterPresenter implements CounterContract.Presenter {
 
             // update the model
             // TODO: insert code if necessary
+            model.updateWithDataFromClicksScreen(savedState.numOfClicks);
+
         }
 
         // call the model and update the state
         // TODO: insert code if necessary
-
+        state.counterVal= model.getStoredCounter();
+        state.isResetEnabled = state.counterVal > 0;
+        state.isIncrEnabled = true;
+        state.isClicksEnabled = true;
         // update the view
         view.get().refreshWithDataUpdated(state);
 
@@ -68,6 +78,8 @@ public class CounterPresenter implements CounterContract.Presenter {
         Log.e(TAG, "onBackPressed()");
 
         // TODO: insert code if necessary
+        passStateToNextScreen(new CounterToClicksState(state.counterVal));
+
     }
 
     @Override
@@ -89,6 +101,12 @@ public class CounterPresenter implements CounterContract.Presenter {
         Log.e(TAG, "onIncrementPressed()");
 
         // TODO: insert code if necessary
+        model.incrementCounter();
+        state.counterVal= model.getStoredCounter();
+        state.isResetEnabled = state.counterVal > 0;
+        state.isIncrEnabled = true;
+        state.isClicksEnabled = true;
+        view.get().refreshWithDataUpdated(state);
     }
 
 
@@ -97,6 +115,14 @@ public class CounterPresenter implements CounterContract.Presenter {
         Log.e(TAG, "onResetPressed()");
 
         // TODO: insert code if necessary
+        model.resetCounter();
+        state.counterVal= model.getStoredCounter();
+
+        state.isResetEnabled = false;
+        state.isIncrEnabled = true;
+        state.isClicksEnabled = true;
+
+        view.get().refreshWithDataUpdated(state);
     }
 
     @Override
@@ -104,6 +130,10 @@ public class CounterPresenter implements CounterContract.Presenter {
         Log.e(TAG, "onClicksPressed()");
 
         // TODO: insert code if necessary
+
+        passStateToNextScreen(new CounterToClicksState(model.getStoredClicks()));
+        view.get().navigateToNextScreen();
+
     }
 
 

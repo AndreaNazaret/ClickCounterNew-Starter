@@ -21,6 +21,8 @@ public class ClicksModel implements ClicksContract.Model {
         // Log.e(TAG, "updateOnRestartScreen()");
 
         // TODO: include code if necessary
+        numOfClicks = number;
+
     }
 
     @Override
@@ -28,6 +30,8 @@ public class ClicksModel implements ClicksContract.Model {
         // Log.e(TAG, "updateWithDataFromPreviousScreen()");
 
         // TODO: include code if necessary
+        numOfClicks = number;
+
     }
 
     @Override

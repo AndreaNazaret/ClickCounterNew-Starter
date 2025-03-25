@@ -36,8 +36,13 @@ public class ClicksPresenter implements ClicksContract.Presenter {
 
             // update the model if is necessary
             // TODO: insert code if necessary
-        }
+            model.updateWithDataFromPreviousScreen(savedState.numOfClicks);
+            state.numOfClicks = savedState.numOfClicks;
 
+        }else{
+            state.numOfClicks = model.getStoredClicks();
+        }
+        state.isClearEnabled = state.numOfClicks > 0;
     }
 
     @Override
@@ -49,6 +54,8 @@ public class ClicksPresenter implements ClicksContract.Presenter {
 
         // update the model if is necessary
         // TODO: insert code if necessary
+        model.updateWithDataFromPreviousScreen(state.numOfClicks);
+
     }
 
     @Override
@@ -57,6 +64,8 @@ public class ClicksPresenter implements ClicksContract.Presenter {
 
         // call the model and set view state
         // TODO: insert code if necessary
+        state.numOfClicks = model.getStoredClicks();
+        state.isClearEnabled = state.numOfClicks > 0;
 
         // update the view
         view.get().refreshWithDataUpdated(state);
@@ -68,6 +77,8 @@ public class ClicksPresenter implements ClicksContract.Presenter {
         Log.e(TAG, "onBackPressed()");
 
         // TODO: insert code if necessary
+
+
     }
 
     @Override
@@ -88,6 +99,12 @@ public class ClicksPresenter implements ClicksContract.Presenter {
         Log.e(TAG, "onClearPressed()");
 
         // TODO: insert code if necessary
+        model.resetClicks();
+        state.numOfClicks = model.getStoredClicks();
+        state.isClearEnabled = false;
+
+        view.get().refreshWithDataUpdated(state);
+
 
     }
 
