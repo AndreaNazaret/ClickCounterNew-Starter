@@ -67,7 +67,7 @@ public class CounterPresenter implements CounterContract.Presenter {
         state.counterVal= model.getStoredCounter();
         state.isResetEnabled = state.counterVal > 0;
         state.isIncrEnabled = true;
-        state.isClicksEnabled = true;
+        state.isClicksEnabled = model.getStoredCounter() > 0;
         // update the view
         view.get().refreshWithDataUpdated(state);
 

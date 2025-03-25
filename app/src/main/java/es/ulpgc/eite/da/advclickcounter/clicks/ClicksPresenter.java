@@ -103,6 +103,8 @@ public class ClicksPresenter implements ClicksContract.Presenter {
         state.numOfClicks = model.getStoredClicks();
         state.isClearEnabled = false;
 
+        passStateToPreviousScreen(new ClicksToCounterState(state.numOfClicks));
+
         view.get().refreshWithDataUpdated(state);
 
 
