@@ -45,7 +45,7 @@ public class CounterPresenter implements CounterContract.Presenter {
 
         // update the model
         // TODO: insert code if necessary
-        model.updateWithDataFromClicksScreen(state.counterVal);
+        model.updateOnRestartScreen(state.counterVal, state.numOfClicks);
     }
 
     @Override
